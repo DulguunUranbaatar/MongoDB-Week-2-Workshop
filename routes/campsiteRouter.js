@@ -273,7 +273,7 @@ campsiteRouter
         if (
           campsite &&
           campsite.comments.id(req.params.commentId) &&
-          campsite.comments.id(req.params.commentId.author.equals(req.user._id))
+          campsite.comments.id(req.params.commentId).author.equals(req.user._id)
         ) {
           campsite.comments.id(req.params.commentId).remove();
           campsite
